@@ -1,19 +1,19 @@
-# Módulo   : VDDEMANDACAB.PAN
-# Función  : Mantenimiento de Cabeceras de Demanda
+# Mï¿½dulo   : VDDEMANDACAB.PAN
+# Funciï¿½n  : Mantenimiento de Cabeceras de Demanda alex 01 pruaba Push
 #
-# Creación : 25-03-2008
+# Creaciï¿½n : 25-03-2008
 # Autor    : FGS
 ###########################################
-# Histórico de cambios:
+# Histï¿½rico de cambios:
 MANTENIMIENTO DE CABECERAS DE DEMANDA
 
- Código __________ Tipo __________ _40________________________________________________
+ Cï¿½digo __________ Tipo __________ _40________________________________________________
  
  Estado #L### _30____________________ Backorder _ Prioridad #L###  Comentario #L#######
  
- Fecha Necesidad: ¿D-MM-Y.YY  Datos externos: _50_____________________________________ 
- Inicio:   ¿D-MM-Y.YY  ________       Insercción: _32________ ¿D-MM-Y.YY  ________ 
- Finaliz:  ¿D-MM-Y.YY  ________       Últ. Modif: _32________ ¿D-MM-Y.YY  ________  
+ Fecha Necesidad: ï¿½D-MM-Y.YY  Datos externos: _50_____________________________________ 
+ Inicio:   ï¿½D-MM-Y.YY  ________       Insercciï¿½n: _32________ ï¿½D-MM-Y.YY  ________ 
+ Finaliz:  ï¿½D-MM-Y.YY  ________       ï¿½lt. Modif: _32________ ï¿½D-MM-Y.YY  ________  
 |
 
 
@@ -24,25 +24,25 @@ PREUPDATE=FEJECUTA("CSELMODIF","ERROR EN FECHA DE MODIFICACION")
 
 
 
-CAMPO=CODDEMANDA,NOUPDATE,TOOLTIP("Código de la Cabacera de Demanda")
+CAMPO=CODDEMANDA,NOUPDATE,TOOLTIP("Cï¿½digo de la Cabacera de Demanda")
 CAMPO=TIPODEMANDA,NOUPDATE,TOOLTIP("Tipo de Demanda")
-CAMPO=DESTIPO,AUXILIAR,NOENTER,TOOLTIP("Descripción del Tipo de Cabecera de Demanda"),POSTCHANGE=FDESIGNACION("+CTIPODEM","")
+CAMPO=DESTIPO,AUXILIAR,NOENTER,TOOLTIP("Descripciï¿½n del Tipo de Cabecera de Demanda"),POSTCHANGE=FDESIGNACION("+CTIPODEM","")
 CAMPO=STATUS,TOOLTIP("Estado de la Cabecera de Demanda"),POSTCHANGE=FDESIGNACION("+CSTATUS","")
 
-CAMPO=DESSTATUS,AUXILIAR,NOENTER,TOOLTIP("Descripción del estado de la Cabecera de Demanda")
+CAMPO=DESSTATUS,AUXILIAR,NOENTER,TOOLTIP("Descripciï¿½n del estado de la Cabecera de Demanda")
 CAMPO=BACKORDER,NOENTER,TOOLTIP("Backorder de la Cabecera de Demanda")
 CAMPO=PRIORI,TOOLTIP("Prioridad de la Cabecera de Demanda")
-CAMPO=CODCOMEN,NOENTER,TOOLTIP("Código de Comentario asociado a la Cabecera de Demanda")
+CAMPO=CODCOMEN,NOENTER,TOOLTIP("Cï¿½digo de Comentario asociado a la Cabecera de Demanda")
 CAMPO=FECNEC,NOUPDATE,TOOLTIP("Fecha en la que se programa que se active la demanda, para demandas diferidas")
 CAMPO=CLAVEEXT,NOENTER,TOOLTIP("Clave externa que permite relacionar con otros sistemas")
-CAMPO=FECINI,NOUPDATE,TOOLTIP("Fecha en la que se reserva por primera vez una línea de esta cabecera de Demanda")
-CAMPO=HORAINI,NOUPDATE,TOOLTIP("Hora en la que se reserva por primera vez una línea de esta cabecera de Demanda")
-CAMPO=CODOPEINSERT,NOENTER,TOOLTIP("Operario que realizó la insercción de la cabecera de demanda")
+CAMPO=FECINI,NOUPDATE,TOOLTIP("Fecha en la que se reserva por primera vez una lï¿½nea de esta cabecera de Demanda")
+CAMPO=HORAINI,NOUPDATE,TOOLTIP("Hora en la que se reserva por primera vez una lï¿½nea de esta cabecera de Demanda")
+CAMPO=CODOPEINSERT,NOENTER,TOOLTIP("Operario que realizï¿½ la insercciï¿½n de la cabecera de demanda")
 CAMPO=FECINSERT,TOOLTIP("Fecha en la que se insertaron los datos del registro")
 CAMPO=HORAINSERT,NOENTER,TOOLTIP("Hora en la que se insertaron los datos del registro")
-CAMPO=FECFIN,NOUPDATE,TOOLTIP("Fecha en la que se cierra la última línea pendiente de esta cabecera de Demanda")
-CAMPO=HORAFIN,NOUPDATE,TOOLTIP("Hora en la que se cierra la última línea pendiente de esta cabecera de Demanda")
-CAMPO=CODOPEMODIF,NOENTER,TOOLTIP("Operario que realizó la última modificación")
+CAMPO=FECFIN,NOUPDATE,TOOLTIP("Fecha en la que se cierra la ï¿½ltima lï¿½nea pendiente de esta cabecera de Demanda")
+CAMPO=HORAFIN,NOUPDATE,TOOLTIP("Hora en la que se cierra la ï¿½ltima lï¿½nea pendiente de esta cabecera de Demanda")
+CAMPO=CODOPEMODIF,NOENTER,TOOLTIP("Operario que realizï¿½ la ï¿½ltima modificaciï¿½n")
 CAMPO=FECMODIF,NOENTER,TOOLTIP("Fecha en que se modificaron los datos del registro")
 CAMPO=HORAMODIF,NOENTER,TOOLTIP("Hora en que se modificaron a los datos del registro")
 
@@ -55,10 +55,10 @@ CURSOR=CSELMODIF SELECT VDUSER.GETUSER CODOPEMODIF,VD.FECHASYS FECMODIF,VD.HORAS
 CURSOR=CDUMMY SELECT :CODDEMANDA  FROM DUAL WHERE 1=1;
 
 
-TECLA=SF8,FEJECUTA("!-CDUMMY","¿ ESTA SEGURO DE ANULAR TODA LA DEMANDA ?",
+TECLA=SF8,FEJECUTA("!-CDUMMY","ï¿½ ESTA SEGURO DE ANULAR TODA LA DEMANDA ?",
 									 FANULADEMCSYNC("FINDEMLANULADAS",":CODDEMANDA",":TIPODEMANDA"),":V10ERROR",
                    FCOMMIT,"",
-                   %FFAILURE,"ANULACIÓN REALIZADA") 
+                   %FFAILURE,"ANULACIï¿½N REALIZADA") 
                    
              
 
