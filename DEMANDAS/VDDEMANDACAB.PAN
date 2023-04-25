@@ -1,5 +1,5 @@
 # M�dulo   : VDDEMANDACAB.PAN
-# Funci�n  : Mantenimiento de Cabeceras de Demanda alex 01 pruaba Push 02
+# Funci�n  : Mantenimiento de Cabeceras de Demanda alex 01 pruaba Push 03
 #
 # Creaci�n : 25-03-2008
 # Autor    : FGS
